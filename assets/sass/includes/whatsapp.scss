@@ -1,0 +1,111 @@
+$green-whats: #00A859;
+$black-hover: #222;
+$gray-label: #495057;
+
+.open-window{
+  //display: none;
+  .whats-elem{
+    display: none;
+  }
+  .modal-sobe{
+    background-image: image_url('whatsapp-bg.png');
+    border-radius: 5px;
+    position: fixed;
+    bottom: 60px;
+    right: 3vh;
+    width: 300px;
+    height: 350px;
+    color: $white;
+    animation: moveDivUp 1s;
+    z-index: 9999;
+
+    @include breakpoint(){
+      right: 2vh;
+    }
+
+    .header-whats{
+      background: $green-whats;
+      border-radius: 5px 0 0;
+      padding: 5px 35px 0;
+      position: relative;
+
+      h4{
+        @include font('Barlow', 14, 900);
+        padding-top: 20px;
+        margin-left: -10px;
+      }
+
+      .close-window{
+        position: absolute;
+        right: -5px;
+        top: -5px;
+
+        a{
+          color: $white;
+
+          &:hover{
+            color: $gray-label;
+          }
+
+          i{
+            font-size: 22px;
+            border-radius: 50%;
+            border: 2px solid $green-whats;
+          }
+        }
+      }
+
+      .logo-chat{
+        padding: 10px 0;
+
+        img{
+          max-width: 90%;
+        }
+      }
+    }
+  }
+
+  .form-whats{
+    margin-top: 10px;
+
+    .form-group{
+      margin-bottom: .5rem !important;
+    }
+
+    label{
+      font-size: 14px;
+      color: $gray-label;
+    }
+
+    input{
+      height: 45px;
+      border-radius: .25rem;
+    }
+
+    .iniciar-conversa{
+      margin-top: 15px;
+
+      .link-whats{
+        @include font('Barlow', 15, 700);
+        text-transform: uppercase;
+        transition: all .4s;
+        text-align: center;
+        background: $gray-label;
+        padding: 12px 25px;
+        display: block;
+        color: $white;
+
+        &:hover{
+          background: $black-hover;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+@keyframes moveDivUp {
+  from {right: 0vh;}
+  to {right: 3.5vh;}
+}
+

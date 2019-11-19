@@ -1,0 +1,153 @@
+section.fale-conosco {
+  background: image_url('bg-interna.png') center no-repeat;
+  background-size: cover;
+  padding: 70px 0 0;
+
+  h1 {
+    color: $blue-medium;
+  }
+
+  h2 {
+    font-size: 22px;
+    color: $blue-medium;
+    padding-bottom: 20px;
+    @include breakpoint() {
+      padding-bottom: 10px;
+    }
+  }
+
+  p {
+    line-height: 1.2rem;
+  }
+
+  form {
+    padding-top: 30px;
+    @include breakpoint() {
+      padding-top: 20px;
+    }
+    input, textarea {
+      border: 1px solid $blue-dark !important;
+      color: $blue-dark !important;
+      border-radius: 10px;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    textarea {
+      height: 132px !important;
+    }
+
+    .input__label-content--chisato:after {
+      color: $blue-dark;
+    }
+  }
+
+  hr {
+    border-top: 2px solid $gray-text;
+    margin: 90px 0 !important;
+    @include breakpoint() {
+      margin: 50px 0 !important;
+    }
+  }
+
+  form.form-style {
+    @include breakpoint() {
+      .form-group {
+        margin-bottom: .5rem;
+      }
+    }
+    input, select {
+      height: 50px !important;
+      border-radius: 10px;
+      color: black;
+      border: none;
+      padding: 15px;
+
+      &::placeholder {
+        color: black;
+      }
+    }
+
+    select {
+      font-size: 14px;
+    }
+
+    .input {
+      max-width: 100%;
+      width: 100%;
+      margin: 0;
+    }
+
+    .input__label {
+      color: black;
+      padding-left: 15px;
+    }
+
+    .input__field--chisato {
+      background: white;
+      border: none;
+    }
+
+    .input__label--chisato {
+      &:after {
+        height: 0;
+      }
+    }
+
+    .input__label-content--chisato {
+      color: black;
+      padding: 0;
+
+      &:after {
+        color: $blue-medium;
+      }
+    }
+
+    .input--filled {
+      .input__label--chisato {
+        top: -18px;
+        transition: 0.3s;
+      }
+    }
+  }
+
+  .localizacao {
+    h4 {
+      color: $blue-medium;
+      text-transform: uppercase;
+      padding: 40px 0 10px;
+      font-size: 24px;
+      @include breakpoint() {
+        padding: 20px 0 5px;
+      }
+    }
+
+    .link-area {
+      padding-top: 40px;
+      @include breakpoint() {
+        padding-top: 20px;
+      }
+    }
+  }
+  .btn {
+    border: 1px solid $blue-dark;
+    background-color: $blue-medium;
+    color: white;
+    font-size: 0.9rem;
+    transition: 0.3s ease-in;
+    padding: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    family-font: "Barlow", "Barlow", sans-serif;
+    letter-spacing: 1px;
+  }
+
+  .btn:hover {
+    border: 1px solid $blue-medium;
+    background-color: white;
+    color: $blue-medium;
+    transition: 0.3s ease-out;
+  }
+}

@@ -1,0 +1,85 @@
+.small-header{
+  background: $white;
+  border-bottom: 1px solid $gray-menu;
+  position: fixed !important;
+  transition: 0.5s ease-in-out;
+}
+
+header{
+  transition: all .1s;
+  width: 100% !important;
+  z-index: 9;
+
+  .container-fluid{
+    padding-right: 70px;
+    padding-left: 70px;
+
+    @include breakpoint(){
+      padding-right: 30px;
+      padding-left: 30px;
+
+      .logo{
+        width: 75%;
+      }
+    }
+  }
+  nav{
+    padding: 0 !important;
+
+    ul{
+      @include breakpoint(){
+        background: $white;
+        text-align: right !important;
+        padding: 15px 0;
+        margin: 10px 0;
+      }
+      li{
+        margin: 0 20px;
+        @include breakpoint(){
+          margin: 8px 15px;
+        }
+        a{
+          @include font('Barlow', 16, 700);
+          text-transform: uppercase;
+          padding: 6px 10px;
+          color: $black;
+        }
+      }
+    }
+
+    .menu-active{
+      border-radius: 3px;
+    }
+
+    .ul-idioma{
+      display: flex;
+      @include breakpoint(){
+        justify-content: flex-end;
+        padding: 0 15px 20px;
+        margin: 0 0 10px;
+      }
+
+      li{
+        margin: 0 5px;
+      }
+    }
+  }
+}
+
+.header-home{
+  position: absolute;
+}
+
+.header-interna{
+  border-bottom: 1px solid $gray-menu;
+  background: $white;
+  padding: 15px 0;
+
+  @include breakpoint(){
+    padding: 10px 0;
+
+    ul li{
+      margin: 8px 0 !important;
+    }
+  }
+}

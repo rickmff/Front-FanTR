@@ -1,0 +1,196 @@
+section.produtos-page, section.produto-detalhe, section.produto-subcategoria, section.produto-categoria {
+  background: image_url('bg-interna.png') center no-repeat;
+  background-size: cover;
+  padding: 70px 0 100px;
+  @include breakpoint() {
+    padding: 50px 0 20px;
+  }
+
+  h1 {
+    color: $blue-medium;
+  }
+
+  .filtro-produto {
+    padding: 0 0 30px;
+  }
+}
+
+section.produto-detalhe {
+  overflow: hidden;
+
+  @include breakpoint() {
+    .input-group {
+      margin: 30px 0 50px;
+    }
+  }
+
+  h2 {
+    font-size: 22px;
+    color: $blue-medium;
+    padding-bottom: 20px;
+    @include breakpoint() {
+      padding-bottom: 15px;
+    }
+  }
+
+  .sliders-prod {
+    a {
+      margin: 0 15px;
+    }
+
+    .slick-list {
+      width: 1120px;
+      @include breakpoint() {
+        width: 100%;
+      }
+    }
+
+    .slick-slide {
+      //width: 360px !important;
+      @include breakpoint() {
+        //width: auto !important;
+      }
+    }
+  }
+
+  .controls {
+    margin-top: 15px;
+    margin-left: 15px;
+
+    .prev, .next {
+      i {
+        cursor: pointer;
+        color: $blue-medium;
+        margin-right: 15px;
+      }
+    }
+  }
+
+  p {
+    margin-bottom: 40px;
+    @include breakpoint() {
+      margin-bottom: 0;
+    }
+  }
+
+  .icon-bg {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background: $blue-medium;
+    padding: 10px 15px;
+  }
+
+  .link-area {
+    margin-top: 16px;
+    a {
+      text-decoration: none;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      border: 2px solid $blue-medium;
+      background: $white;
+      padding: 14px 35px;
+
+      &:hover {
+        background: $blue-dark;
+        color: $white;
+      }
+    }
+  }
+}
+
+section.ficha-tecnica-prod {
+  background: image_url('bg-interna2.png') center no-repeat;
+  background-size: cover;
+  padding: 70px 0 110px;
+  @include breakpoint() {
+    padding: 50px 0 60px;
+  }
+
+  h2 {
+    font-size: 22px;
+    color: $blue-medium;
+    padding-bottom: 20px;
+    @include breakpoint() {
+      padding-bottom: 10px;
+    }
+  }
+
+  h3 {
+    font-size: 16px;
+    color: $gray-text;
+    padding-bottom: 20px;
+    @include breakpoint() {
+      padding: 30px 0 5px;
+    }
+  }
+}
+
+section.mais-produtos {
+  padding: 70px 0 100px;
+  @include breakpoint() {
+    padding: 50px 0 20px;
+  }
+
+  h2 {
+    font-size: 22px;
+    color: $blue-medium;
+    padding-bottom: 40px;
+    @include breakpoint() {
+      padding-bottom: 30px;
+    }
+  }
+
+  section.servicos-page {
+    background-color: $bg-light;
+    background-image: none;
+    padding: 10px 0 0 !important;
+
+  }
+}
+
+
+section.produto-subcategoria, section.produto-categoria {
+  padding: 70px 0 0 !important;
+
+  .mais-produtos {
+    padding: 20px 0 100px;
+  }
+}
+
+.paginacao a.num_pag_ativo {
+  background: #2c3c50;
+  color: #fff;
+}
+
+.paginacao a {
+  font-size: 16px;
+  font-weight: 700;
+  background: #a29a90;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-right: 5px;
+  color: #fff;
+}
+
+
+.ficha {
+  background-color: #00769E;
+  color: white !important;
+  vert-align: bottom;
+  border-radius: 10px 10px 0 0;
+  padding: 25px;
+  max-height: 100px;
+  width: 100%;
+
+  h2 {
+    color: white !important;
+    font-size: 2rem !important;
+    float: left;
+    padding-bottom: 0 !important;
+  }
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+

@@ -1,0 +1,71 @@
+.page-home-prod {
+  margin-top: -140px;
+}
+
+section.case-publicacoes {
+  background: image_url('bg-blue.png') no-repeat center;
+  background-size: cover;
+  padding: 90px 0 110px;
+  @include breakpoint() {
+    padding: 50px 0 60px;
+  }
+
+  .ultimas-publicacoes {
+    img {
+      padding-bottom: 40px;
+    }
+
+    h2 {
+      color: $blue-medium;
+      padding: 40px 0 25px;
+      @include breakpoint() {
+        padding: 0 0 30px;
+      }
+    }
+
+    .pub-text {
+      @include breakpoint() {
+        margin-bottom: 40px;
+      }
+
+      time {
+        @include font('Barlow', 12, 800);
+        color: $gray-color;
+      }
+
+      h3 {
+        color: $black-text;
+        padding-top: 15px;
+        @include breakpoint() {
+          padding-top: 5px;
+        }
+      }
+
+      h4 {
+        color: $gray-color;
+        text-decoration: underline;
+      }
+
+      p {
+        padding: 20px 0 25px;
+        @include breakpoint() {
+          padding: 10px 0 20px;
+        }
+      }
+    }
+  }
+}
+
+section.produtos-fantr {
+  padding: 0 0 80px;
+  @include breakpoint() {
+    padding: 0 0 40px;
+  }
+
+  .link-area {
+    margin-top: 30px;
+    @include breakpoint() {
+      margin-top: 0;
+    }
+  }
+}

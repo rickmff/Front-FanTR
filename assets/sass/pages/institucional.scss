@@ -1,0 +1,79 @@
+section.institucional {
+  background: image_url('bg-interna.png') center no-repeat;
+  background-size: cover;
+  padding: 70px 0 0;
+  margin-bottom: -3px;
+  @include breakpoint() {
+    padding: 50px 0 0;
+  }
+
+  h1 {
+    color: $blue-medium;
+  }
+
+  h2 {
+    padding-bottom: 3rem;
+    text-transform: uppercase;
+    color: $blue-medium;
+    @include breakpoint() {
+      padding-bottom: 15px;
+      padding-top: 1rem;
+    }
+  }
+
+  h3 {
+    letter-spacing: 2px;
+  }
+
+  .bg-missao {
+    text-align: center;
+    background-color: $blue-dark;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    color: white;
+
+    p {
+      color: white;
+    }
+  }
+
+  .cards-institucional {
+    padding: 3rem;
+    background: #eff4f6;
+  }
+  .icon-institucional {
+    position: absolute;
+    top: -3.3rem;
+
+  }
+  .center {
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  .valores {
+    p {
+      display: block;
+      padding-bottom: 2.5rem;
+    }
+
+    img {
+      margin-right: 1rem;
+    }
+  }
+  .img-fluid {
+    min-width: 100%;
+  }
+
+  @include breakpoint() {
+    .breadcrumb-site {
+      padding-bottom: 0 !important;
+    }
+    .FanTR-mundo {
+      margin-top: 0rem;
+    }
+  }
+  .FanTR-mundo {
+    margin-top: 6rem;
+  }
+}

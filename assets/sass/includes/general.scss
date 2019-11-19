@@ -1,0 +1,422 @@
+////
+/// general.scss
+/// Aqui devem ser inseridas todas as classes e estilos universais o website
+////
+
+@include placeholder(13, '$black');
+@include selection($black, $white);
+
+body {
+  font: {
+    family: $main-font;
+    size: $rem-base;
+  }
+
+  p{
+    @include font('Barlow', 16, 400);
+    line-height: 1.3rem;
+    color: $black-text;
+  }
+
+  h1, h2{
+    @include font('Barlow', 30, 800);
+    text-transform: uppercase;
+    @include breakpoint(){
+      font-size: 28px;
+    }
+  }
+
+  h3{
+    @include font('Barlow', 18, 800);
+    text-transform: uppercase;
+  }
+
+  h4{
+    @include font('Barlow', 16, 800);
+  }
+
+  h5{
+    @include font('Barlow', 12, 600);
+  }
+
+  a{
+    &:hover{
+      text-decoration: none;
+      transition: .4s all;
+    }
+  }
+
+  img{
+    max-width: 100%;
+  }
+
+  .form-control:focus {
+    color: white !important;
+  }
+
+  .link-area{
+    a{
+      font-size: 14px;
+      font-weight: 800;
+      color: $blue-medium;
+      text-transform: uppercase;
+      text-decoration: underline;
+    }
+  }
+}
+
+.less-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+
+.bg-title-page {
+  background-image: url("");
+}
+
+.slider-bullet{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 25%;
+  width: 100%;
+
+  li{
+    margin: 0 5px;
+    padding: 0;
+    border-radius: 10px;
+    list-style: none;
+    background: $gray-color;
+    width: 8px;
+    height: 8px;
+  }
+
+  li.slick-active {
+    border: 0;
+    background: $blue-medium;
+    width: 12px;
+    height: 12px;
+    position: relative;
+    top: -2px
+  }
+
+  button {
+    border: 0;
+    font-size: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    background: transparent;
+    width: 15px;
+    height: 15px;
+    position: relative;
+    top: 0;
+    outline: none;
+  }
+}
+
+
+.hidden-mobile {
+  @include breakpoint{
+    display: none!important;
+  }
+}
+
+.show-mobile {
+  display: none;
+  @include breakpoint{
+    display: block!important;
+  }
+}
+
+.text-center-mobile{
+  @include breakpoint{
+    text-align: center !important;
+  }
+}
+
+.show{ display:block; opacity:1 !important;}
+.gotop {
+  background: $blue-dark;
+  border: 1px solid $white;
+  border-radius: 50%;
+  padding: .8em .9em;
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  cursor: pointer;
+  opacity: 0;
+  color: $white;
+  transition: all .4s;
+  @include breakpoint(){
+    right: 1em;
+    z-index: 2;
+  }
+}
+
+
+section.newsletter{
+  background: $blue-medium;
+  padding: 55px 0;
+  @include breakpoint(){
+    padding: 40px 0 30px;
+  }
+
+  h3{
+    padding-top: 5px;
+    color: $white;
+    @include breakpoint(){
+      padding-bottom: 30px;
+    }
+  }
+}
+
+div.filtro-produto{
+  padding: 20px 0 0;
+
+  .filtro-aplicacao, .filtro-busca{
+    background: $blue-medium;
+    border-radius: 8px;
+    padding: 35px 40px;
+    @include breakpoint(){
+      padding: 25px 20px;
+      margin-bottom: 20px;
+    }
+  }
+
+  h3{
+    color: $white;
+    font-weight: 700;
+    padding-bottom: 20px;
+    @include breakpoint(){
+      padding-bottom: 15px;
+    }
+  }
+
+  .custom-select{
+    width: 100%;
+  }
+
+  .input-group-append {
+    margin-left: -45px;
+  }
+
+  .input-group-text {
+    background: $white;
+    color: $blue-medium;
+    padding: .375rem 1rem;
+  }
+
+  select{
+    cursor: pointer;
+  }
+
+  select, input{
+    @include font('Barlow', 16, 400);
+    background: transparent;
+    border: 2px solid $white;
+    height: 45px !important;
+    color: $white;
+
+    &::placeholder{
+      @include font('Barlow', 16, 400);
+      color: $white;
+    }
+
+    option{
+      color: $black-text;
+    }
+
+    &:focus{
+      border-color: $blue-dark;
+      background: transparent;
+      z-index: 1 !important;
+    }
+  }
+
+  button{
+    @include font('Barlow', 18, 800);
+    text-transform: uppercase;
+    background: $white;
+    color: $blue-medium;
+    width: 135px;
+    z-index: 2;
+    @include breakpoint(){
+      font-size: 16px;
+      width: 85px;
+    }
+
+    &:hover{
+      transition: .4s all;
+      background: $blue-dark;
+      color: $white;
+    }
+  }
+}
+
+section.produtos-fantr{
+  .product-name{
+    padding: 25px;
+    margin-top: -2px;
+    text-align: center;
+    background: $blue-medium;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    @include breakpoint(){
+      padding: 15px;
+      margin-bottom: 40px;
+    }
+
+    h3{
+      color: $white;
+      font-weight: 700;
+    }
+  }
+}
+
+section.case-publicacoes, section.servicos-page, section.servicos-inc{
+  .case-fantr, .servicos-fantr{
+    padding-bottom: 110px;
+    @include breakpoint(){
+      padding-bottom: 50px;
+    }
+
+    .case-box, .serv-box{
+      background: $white;
+      padding: 35px 25px;
+      margin-top: -2px;
+      @include breakpoint(){
+        margin-bottom: 40px;
+        padding: 25px;
+      }
+
+      h3{
+        padding-bottom: 20px;
+        color: $black-text;
+        @include breakpoint(){
+          padding-bottom: 15px;
+        }
+      }
+
+      h4{
+        padding-top: 20px;
+        color: $gray-color;
+        text-decoration: underline;
+      }
+    }
+
+    .link-area{
+      margin-top: 30px;
+      @include breakpoint(){
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.home-sliders{
+  .sup-banner{
+    padding: 150px 0 190px;
+    background-size: cover !important;
+    @include breakpoint(){
+      padding: 70px 0 190px;
+    }
+
+    h1{
+      color: $blue-medium;
+      padding-top: 90px;
+    }
+
+    .link-area{
+      margin-top: 30px;
+      @include breakpoint(){
+        margin: 20px 0 30px;
+      }
+    }
+  }
+}
+
+
+.breadcrumb-site{
+  @include font('Barlow', 16, 800);
+  text-transform: uppercase;
+  padding: 10px 0 50px;
+  color: $gray-text;
+  @include breakpoint(){
+    padding: 10px 0 40px;
+  }
+
+  a{
+    color: $gray-text;
+  }
+}
+
+
+form.form-style {
+  .form-group {
+    margin-bottom: .5rem;
+
+    @include breakpoint() {
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  input {
+    @include font('Barlow', 16, 400);
+    border-radius: 5px;
+    color: $white;
+    height: 45px;
+  }
+
+  .input {
+    width: 100%;
+    margin: 0;
+  }
+
+  .input--chisato {
+    padding-top: 0;
+  }
+
+  .input__label--chisato {
+    top: -20px
+  }
+
+  .input__label-content--chisato {
+    @include font('Barlow', 16, 400);
+    color: $white;
+  }
+
+  .input__field--chisato:focus, .input--filled .input__field--chisato {
+    border-color: $blue-dark;
+  }
+  .input__label-content--chisato::after {
+    color: $blue-dark;
+  }
+
+
+  .button-area{
+    button{
+      @include font('Barlow', 18, 800);
+      text-transform: uppercase;
+      border-radius: 5px;
+      background: $white;
+      color: $blue-medium;
+      height: 45px;
+
+      &:hover{
+        transition: .4s all;
+        background: $blue-dark;
+        color: $white;
+      }
+    }
+  }
+}
+
+section.servicos-inc{
+  background: $bg-light;
+  padding: 90px 0 0;
+  @include breakpoint(){
+    padding: 60px 0 10px;
+  }
+}

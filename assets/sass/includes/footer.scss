@@ -1,0 +1,84 @@
+footer{
+  padding: 60px 0 70px;
+  background: image_url('../images/footer-bg.jpg') no-repeat;
+  background-size: cover;
+
+  @include breakpoint(){
+    padding: 50px 0 20px;
+  }
+
+  h5{
+    color: $blue-medium;
+  }
+
+  p{
+    color: $white;
+    font-size: 14px;
+    padding: 10px 0 25px;
+    @include breakpoint(){
+      padding: 5px 0 20px;
+    }
+
+    a{
+      color: $white;
+
+      &:hover{
+        color: $blue-medium;
+      }
+    }
+  }
+
+  ul.ul-menu{
+    li{
+      margin-bottom: 25px;
+      a{
+        @include font('Barlow', 14, 800);
+        text-transform: uppercase;
+        color: $white;
+
+        &:hover{
+          color: $blue-medium;
+        }
+      }
+    }
+  }
+
+  .creditos{
+    margin-top: 60px;
+
+    @include breakpoint(){
+      margin-top: 20px;
+      font-size: 12px;
+    }
+  }
+
+  .ul-midias{
+    li{
+      margin-top: 20px;
+      @include breakpoint(){
+        margin-top: 15px;
+      }
+
+      a{
+        @include font('Barlow', 14, 800);
+        text-transform: uppercase;
+        color: $white;
+
+        &:hover{
+          color: $blue-medium;
+        }
+
+        i{
+          text-align: center;
+          background: $blue-medium;
+          border-radius: 50px;
+          margin-right: 10px;
+          padding-top: 6px;
+          color: $blue-dark;
+          height: 25px;
+          width: 25px;
+        }
+      }
+    }
+  }
+}
